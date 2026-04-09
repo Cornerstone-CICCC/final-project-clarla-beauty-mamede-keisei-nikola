@@ -2,6 +2,9 @@
 body{
     background-color: #f8f6f4;
 }
+a{
+      text-decoration: none
+}
 .headder{
     text-align: center;
 }
@@ -121,8 +124,8 @@ h1{
     color: #725A58;
 }
 .serviceMB{
-    padding-left: 14%;
-    padding-right: 14%;
+    padding-left: 13%;
+    padding-right: 11%;
     padding-top: 7%;
     padding-bottom: 15%;
 }
@@ -158,6 +161,7 @@ h1{
     font-size: 1.5em;
     color: #191919;
     margin-bottom: 0.2em;
+    margin-top: 1em;
 }
 .fullDesc{
     font-family: "Nunito";
@@ -174,4 +178,8 @@ h1{
     padding-left: 1.5em;
     padding-right: 1.5em;
     margin-top: 0.5em;
+}
+.classInstructor > img{
+    width: 23em;
+    height: 29em;
 }
