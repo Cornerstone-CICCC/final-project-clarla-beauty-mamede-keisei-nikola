@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carla Beauty | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/stylesM.css?v=20260410-contact-fix">
+</head>
+<body data-page="contact">
+  <header class="site-header site-header-light">
+    <div class="header-shell">
+      <div class="page-header-art" aria-hidden="true">
+        <img class="page-header-art-image" src="../images/header (6).png" alt="">
+        <a class="page-header-link page-header-home" data-link="home" href="./Home.html"><span class="sr-only">Home</span></a>
+        <a class="page-header-link page-header-my-work" href="./myWork.html"><span class="sr-only">My Work</span></a>
+        <a class="page-header-link page-header-services" href="./services.html"><span class="sr-only">Services</span></a>
+        <a class="page-header-link page-header-classes" href="./classes.html"><span class="sr-only">Classes</span></a>
+        <a class="page-header-link page-header-beauty-tips" data-link="beauty-tips" href="./beautyTips.html"><span class="sr-only">Beauty Tips</span></a>
+        <a class="page-header-link page-header-about" data-link="about" href="./about.html"><span class="sr-only">About</span></a>
+        <a class="page-header-link page-header-contact" data-link="contact" href="./contact.html#service-form"><span class="sr-only">Contact</span></a>
+        <a class="page-header-link page-header-instagram" href="https://www.instagram.com/carlabeatrizs_" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="sr-only">Instagram</span></a>
+      </div>
+      <a class="brand-center page-mobile-brand" href="./Home.html" aria-label="Carla Beauty home">
+        <img class="brand-logo-image" src="../images/Group 8.png" alt="Carla Beauty logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a data-link="home" href="./Home.html">Home</a>
+        <a href="./myWork.html">My Work</a>
+        <a href="./services.html">Services</a>
+        <a href="./classes.html">Classes</a>
+        <a data-link="beauty-tips" href="./beautyTips.html">Beauty Tips</a>
+        <a data-link="about" href="./about.html">About</a>
+        <a data-link="contact" href="./contact.html#service-form">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-page">
+      <div class="contact-page-shell">
+        <div class="contact-page-title contact-page-title-art">
+          <img class="contact-title-art-image" src="../images/Title.png" alt="Contact. Get a quote and book a free consultation for your special day or our academy services. +1 0000000000, WhatsApp +1 0000000000, carlabeatrizs_">
+        </div>
+
+        <div class="contact-form-card contact-form-card-centered contact-wizard-card">
+          <div class="contact-tabs contact-tabs-lined">
+            <button class="tab-button is-active" type="button" data-form-target="service-form">Services</button>
+            <button class="tab-button" type="button" data-form-target="academy-form">Classes</button>
+          </div>
+
+          <form class="contact-form active contact-figma-form contact-wizard" id="service-form" data-form="service-form" novalidate>
+            <section class="contact-step active" data-step="intro">
+              <fieldset class="contact-choice-group">
+                <legend>Event Type</legend>
+                <div class="segmented-options">
+                  <label class="segment-option selected">
+                    <input type="radio" name="eventType" value="Wedding" checked>
+                    <span>Wedding</span>
+                  </label>
+                  <label class="segment-option">
+                    <input type="radio" name="eventType" value="Party">
+                    <span>Party</span>
+                  </label>
+                  <label class="segment-option">
+                    <input type="radio" name="eventType" value="Photoshoot">
+                    <span>Photoshoot</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="contact-two-col">
+                <fieldset class="contact-choice-group">
+                  <legend>Event Date</legend>
+                  <label class="input-wrap">
+                    <input id="service-event-date" type="text" name="eventDate" placeholder="Select Date" required data-smart-date>
+                  </label>
+                  <label class="inline-check">
+                    <input type="checkbox" name="dateUndecided" data-toggle-disable="#service-event-date">
+                    <span>Not decided</span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="contact-choice-group">
+                  <legend>Event Time</legend>
+                  <label class="input-wrap">
+                    <select id="service-event-time" name="eventTime" required>
+                      <option value="Full day">Full day</option>
+                      <option value="Morning">Morning</option>
+                      <option value="Afternoon">Afternoon</option>
+                      <option value="Evening">Evening</option>
+                    </select>
+                  </label>
+                  <label class="inline-check">
+                    <input type="checkbox" name="timeUndecided" data-toggle-disable="#service-event-time">
+                    <span>Not decided</span>
+                  </label>
+                </fieldset>
+              </div>
+
+              <label class="contact-choice-group">
+                <span>Name</span>
+                <span class="input-wrap">
+                  <input type="text" name="fullName" placeholder="Your name" required>
+                </span>
+              </label>
+
+              <fieldset class="contact-choice-group">
+                <legend>Contact</legend>
+                <label class="radio-line active">
+                  <input type="radio" name="contactMethod" value="Call" checked>
+                  <span>Call</span>
+                </label>
+                <label class="phone-entry" data-contact-adapter>
+                  <span class="phone-prefix" data-contact-prefix>+1</span>
+                  <input type="tel" name="contactValue" placeholder="Your mobile number" required data-contact-input>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="contactMethod" value="WhatsApp">
+                  <span>WhatsApp</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="contactMethod" value="SMS">
+                  <span>SMS</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="contactMethod" value="Email">
+                  <span>Email</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="contact-choice-group contact-call-availability" data-call-schedule>
+                <legend>When do you want us to call?</legend>
+                <label class="radio-line">
+                  <input type="radio" name="callWindow" value="I don't mind" checked>
+                  <span>I don't mind</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="callWindow" value="Morning">
+                  <span>Morning</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="callWindow" value="Afternoon">
+                  <span>Afternoon</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="callWindow" value="Evening">
+                  <span>Evening</span>
+                </label>
+              </fieldset>
+
+              <button class="button button-primary contact-next-button" type="button" data-step-next="details">Next</button>
+            </section>
+
+            <section class="contact-step" data-step="details">
+              <button class="contact-back-link" type="button" data-step-back="intro"><span aria-hidden="true">&#8249;</span> Back</button>
+
+              <div class="contact-detail-variant is-active" data-variant="wedding">
+                <h3 class="contact-step-title">Bridal Service</h3>
+                <div class="segmented-options two-up contact-detail-service-options">
+                  <label class="segment-option selected">
+                    <input type="radio" name="bridalService" value="Makeup" checked>
+                    <span>Makeup</span>
+                  </label>
+                  <label class="segment-option">
+                    <input type="radio" name="bridalService" value="Hairstyle">
+                    <span>Hairstyle</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="contact-detail-variant" data-variant="generic">
+                <h3 class="contact-step-title">Service</h3>
+                <div class="segmented-options two-up contact-detail-service-options">
+                  <label class="segment-option selected">
+                    <input type="radio" name="genericServiceChoice" value="Makeup" checked>
+                    <span>Makeup</span>
+                  </label>
+                  <label class="segment-option">
+                    <input type="radio" name="genericServiceChoice" value="Hairstyle">
+                    <span>Hairstyle</span>
+                  </label>
+                </div>
+              </div>
+
+              <fieldset class="contact-choice-group">
+                <legend>Event Location</legend>
+                <label class="input-wrap input-wrap-icon">
+                  <input id="service-location" type="text" name="eventLocation" placeholder="Search address">
+                  <span class="input-wrap-trailing" aria-hidden="true">&#9906;</span>
+                </label>
+                <label class="inline-check">
+                  <input type="checkbox" name="locationUndecided" data-toggle-disable="#service-location">
+                  <span>Not decided</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="contact-choice-group">
+                <legend>Premium service</legend>
+                <div class="contact-check-grid">
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Deep skin cleansing"><span>Deep skin cleansing</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Bleach body hair"><span>Bleach body hair</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Hydromassage"><span>Hydromassage</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Hair Moisture"><span>Hair Moisture</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Waxing"><span>Waxing</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Foot and hand SPA"><span>Foot and hand SPA</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Relaxing massage"><span>Relaxing massage</span></label>
+                  <label class="contact-check-item"><input type="checkbox" name="premiumServices" value="Gommage (body exfoliation and hydration)"><span>Gommage (body exfoliation and hydration)</span></label>
+                </div>
+              </fieldset>
+
+              <div class="contact-detail-variant is-active" data-variant="wedding">
+                <fieldset class="contact-choice-group">
+                  <legend>Anyone else need service?</legend>
+                  <div class="contact-attendee-grid">
+                    <div class="contact-attendee-row contact-attendee-row-single">
+                      <div class="contact-attendee-name">Groom</div>
+                      <div class="contact-stepper">
+                        <button type="button" data-stepper-action="decrement" aria-label="Decrease groom count">-</button>
+                        <input type="number" name="groomCount" value="0" min="0" max="10" readonly>
+                        <button type="button" data-stepper-action="increment" aria-label="Increase groom count">+</button>
+                      </div>
+                      <span class="contact-inline-spacer" aria-hidden="true"></span>
+                      <label class="contact-inline-check"><input type="checkbox" name="groomMakeup"><span>Makeup</span></label>
+                    </div>
+                    <div class="contact-attendee-row">
+                      <div class="contact-attendee-name">Bridesmaid</div>
+                      <div class="contact-stepper">
+                        <button type="button" data-stepper-action="decrement" aria-label="Decrease bridesmaid count">-</button>
+                        <input type="number" name="bridesmaidCount" value="0" min="0" max="10" readonly>
+                        <button type="button" data-stepper-action="increment" aria-label="Increase bridesmaid count">+</button>
+                      </div>
+                      <span class="contact-inline-spacer" aria-hidden="true"></span>
+                      <label class="contact-inline-check"><input type="checkbox" name="bridesmaidHair"><span>Hairstyle</span></label>
+                      <label class="contact-inline-check"><input type="checkbox" name="bridesmaidMakeup"><span>Makeup</span></label>
+                    </div>
+                    <div class="contact-attendee-row">
+                      <div class="contact-attendee-name">Flower girl</div>
+                      <div class="contact-stepper">
+                        <button type="button" data-stepper-action="decrement" aria-label="Decrease flower girl count">-</button>
+                        <input type="number" name="flowerGirlCount" value="0" min="0" max="10" readonly>
+                        <button type="button" data-stepper-action="increment" aria-label="Increase flower girl count">+</button>
+                      </div>
+                      <span class="contact-inline-spacer" aria-hidden="true"></span>
+                      <label class="contact-inline-check"><input type="checkbox" name="flowerGirlHair"><span>Hairstyle</span></label>
+                      <label class="contact-inline-check"><input type="checkbox" name="flowerGirlMakeup"><span>Makeup</span></label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="contact-detail-variant" data-variant="generic">
+                <fieldset class="contact-choice-group">
+                  <legend>Anyone else need service?</legend>
+                  <div class="contact-attendee-grid">
+                    <div class="contact-attendee-row">
+                      <div class="contact-attendee-name">Woman</div>
+                      <div class="contact-stepper">
+                        <button type="button" data-stepper-action="decrement" aria-label="Decrease woman count">-</button>
+                        <input type="number" name="womanCount" value="0" min="0" max="10" readonly>
+                        <button type="button" data-stepper-action="increment" aria-label="Increase woman count">+</button>
+                      </div>
+                      <span class="contact-inline-spacer" aria-hidden="true"></span>
+                      <label class="contact-inline-check"><input type="checkbox" name="womanHair"><span>Hairstyle</span></label>
+                      <label class="contact-inline-check"><input type="checkbox" name="womanMakeup"><span>Makeup</span></label>
+                    </div>
+                    <div class="contact-attendee-row contact-attendee-row-single">
+                      <div class="contact-attendee-name">Man</div>
+                      <div class="contact-stepper">
+                        <button type="button" data-stepper-action="decrement" aria-label="Decrease man count">-</button>
+                        <input type="number" name="manCount" value="0" min="0" max="10" readonly>
+                        <button type="button" data-stepper-action="increment" aria-label="Increase man count">+</button>
+                      </div>
+                      <span class="contact-inline-spacer" aria-hidden="true"></span>
+                      <label class="contact-inline-check"><input type="checkbox" name="manMakeup"><span>Makeup</span></label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <label class="contact-choice-group">
+                <span>Anything you want us to know?</span>
+                <span class="input-wrap">
+                  <textarea name="extraNotes" rows="5" placeholder="Your message"></textarea>
+                </span>
+              </label>
+
+              <button class="button button-primary contact-next-button" type="submit">Submit</button>
+            </section>
+
+            <section class="contact-step contact-step-success" data-step="success">
+              <div class="contact-success-copy">
+                <img class="contact-success-banner-image" src="../images/Frame 395.png" alt="Thanks Janny, we will contact you soon!">
+                <button class="contact-edit-link" type="button" data-edit-summary="details">
+                  <span>Edit Details</span>
+                  <img src="../images/Vector (1).png" alt="" aria-hidden="true">
+                </button>
+              </div>
+
+              <div class="contact-success-card">
+                <div class="contact-success-image-wrap">
+                  <img class="contact-success-image" src="../images/Frame 436.png" alt="Beauty product arrangement">
+                </div>
+                <div class="contact-success-price-block">
+                  <p class="contact-success-price-label">Your estimated price will be:</p>
+                  <p class="contact-success-price" data-success-price>CAD 1,000 - 1,200</p>
+                </div>
+                <div class="contact-success-summary-grid">
+                  <div class="contact-success-summary-column">
+                    <h3 data-summary-title-basic>Basic services</h3>
+                    <ul data-summary-basic></ul>
+                  </div>
+                  <div class="contact-success-summary-column">
+                    <h3 data-summary-title-premium>Premium services</h3>
+                    <ul data-summary-premium></ul>
+                  </div>
+                  <div class="contact-success-summary-column">
+                    <h3 data-summary-title-additional>Additional attendees</h3>
+                    <ul data-summary-additional></ul>
+                  </div>
+                </div>
+                <div class="contact-success-footer">
+                  <img class="contact-success-footer-art" src="../images/Frame 620.png" alt="Carla Beauty contact details">
+                  <button class="contact-share-button" type="button" data-share-summary>Share</button>
+                </div>
+              </div>
+            </section>
+          </form>
+
+          <form class="contact-form contact-figma-form contact-wizard" id="academy-form" data-form="academy-form" novalidate>
+            <section class="contact-step active" data-step="intro">
+              <fieldset class="contact-choice-group">
+                <legend>Class</legend>
+                <div class="segmented-options contact-class-options">
+                  <label class="segment-option selected">
+                    <input type="radio" name="classType" value="1-on-1 Master Subscription" checked>
+                    <span>1-on-1 Master Subscription</span>
+                  </label>
+                  <label class="segment-option">
+                    <input type="radio" name="classType" value="1-day Makeup Workshop">
+                    <span>1-day Makeup Workshop</span>
+                  </label>
+                  <label class="segment-option">
+                    <input type="radio" name="classType" value="Self-Makeup beginner class">
+                    <span>Self-Makeup beginner class</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="contact-choice-group">
+                <legend>Class Date</legend>
+                <p class="contact-help-copy">When you would like to take your class?</p>
+                <label class="input-wrap">
+                  <input id="academy-class-date" type="text" name="preferredDate" placeholder="Select Date" data-smart-date>
+                </label>
+                <label class="inline-check">
+                  <input type="checkbox" name="dateFlexible" data-toggle-disable="#academy-class-date">
+                  <span>Doesn't matter</span>
+                </label>
+              </fieldset>
+
+              <label class="contact-choice-group">
+                <span>Any questions?</span>
+                <span class="input-wrap">
+                  <textarea name="questions" rows="5" placeholder="Your message"></textarea>
+                </span>
+              </label>
+
+              <label class="contact-choice-group">
+                <span>Name</span>
+                <span class="input-wrap">
+                  <input type="text" name="fullName" placeholder="Your name" required>
+                </span>
+              </label>
+
+              <fieldset class="contact-choice-group">
+                <legend>Contact</legend>
+                <label class="radio-line active">
+                  <input type="radio" name="contactMethod" value="Call" checked>
+                  <span>Call</span>
+                </label>
+                <label class="phone-entry" data-contact-adapter>
+                  <span class="phone-prefix" data-contact-prefix>+1</span>
+                  <input type="tel" name="contactValue" placeholder="Your mobile number" required data-contact-input>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="contactMethod" value="WhatsApp">
+                  <span>WhatsApp</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="contactMethod" value="SMS">
+                  <span>SMS</span>
+                </label>
+                <label class="radio-line">
+                  <input type="radio" name="contactMethod" value="Email">
+                  <span>Email</span>
+                </label>
+              </fieldset>
+
+              <button class="button button-primary contact-next-button" type="submit">Next</button>
+            </section>
+
+            <section class="contact-step contact-step-success contact-step-success-academy" data-step="success">
+              <div class="contact-success-copy contact-success-copy--academy">
+                <img class="contact-success-banner-image contact-success-banner-image--academy" src="../images/Frame 395.png" alt="Thanks Janny, we will contact you soon!">
+              </div>
+
+              <div class="contact-success-image-wrap contact-success-image-wrap--academy">
+                <img class="contact-success-image contact-success-image--academy contact-success-image--academy-frame" src="../images/Frame 405.png" alt="Beauty product arrangement and Carla Beauty contact details">
+              </div>
+            </section>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-figma">
+      <div class="site-footer-figma-frame">
+        <img class="site-footer-figma-image" src="../images/footer (3).png" alt="Carla Beauty footer">
+        <a class="site-footer-hotspot site-footer-logo" href="./Home.html" aria-label="Carla Beauty home"><span class="sr-only">Carla Beauty home</span></a>
+        <a class="site-footer-hotspot site-footer-call" href="./contact.html#service-form" aria-label="Contact Carla Beauty"><span class="sr-only">Contact Carla Beauty</span></a>
+        <a class="site-footer-hotspot site-footer-whatsapp" href="./contact.html#service-form" aria-label="WhatsApp inquiry"><span class="sr-only">WhatsApp inquiry</span></a>
+        <a class="site-footer-hotspot site-footer-instagram" href="https://www.instagram.com/carlabeatrizs_" target="_blank" rel="noreferrer" aria-label="Instagram"><span class="sr-only">Instagram</span></a>
+        <a class="site-footer-hotspot site-footer-nav-home" href="./Home.html"><span class="sr-only">Home</span></a>
+        <a class="site-footer-hotspot site-footer-nav-mywork" href="./myWork.html"><span class="sr-only">My Work</span></a>
+        <a class="site-footer-hotspot site-footer-nav-services" href="./services.html"><span class="sr-only">Services</span></a>
+        <a class="site-footer-hotspot site-footer-nav-classes" href="./classes.html"><span class="sr-only">Classes</span></a>
+        <a class="site-footer-hotspot site-footer-nav-beautytips" href="./beautyTips.html"><span class="sr-only">Beauty Tips</span></a>
+        <a class="site-footer-hotspot site-footer-nav-about" href="./about.html"><span class="sr-only">About</span></a>
+        <a class="site-footer-hotspot site-footer-nav-contact" href="./contact.html#service-form"><span class="sr-only">Contact</span></a>
+      </div>
+    </div>
+    <div class="site-footer-fallback">
+      <div class="footer-brand">
+        <img class="footer-logo-image" src="../images/cb-logo-final-1.png" alt="Carla Beauty logo">
+      </div>
+      <div class="footer-links">
+        <a href="./Home.html">Home</a>
+        <a href="./beautyTips.html">Beauty Tips</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html#service-form">Contact</a>
+      </div>
+      <p class="footer-copy">Inquiries for bridal beauty, event styling, and makeup education.</p>
+      <p class="footer-copy">&copy; <span data-year></span> Clarla Beauty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/scryptM.js?v=20260410-contact-fix"></script>
+</body>
+</html>
