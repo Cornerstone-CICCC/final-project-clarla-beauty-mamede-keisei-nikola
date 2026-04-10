@@ -23,6 +23,23 @@ if (currentPage) {
   });
 }
 
+const isContactPage = document.body.dataset.page === "contact";
+
+if (isContactPage) {
+  const contactHashMap = {
+    "": "#service-form",
+    "#contact": "#service-form",
+    "#services-form": "#service-form",
+    "#service-form": "#service-form",
+    "#academy-form": "#academy-form",
+  };
+  const normalizedHash = contactHashMap[window.location.hash] ?? "#service-form";
+
+  if (window.location.hash !== normalizedHash) {
+    history.replaceState(null, "", `${window.location.pathname}${normalizedHash}`);
+  }
+}
+
 const tabButtons = document.querySelectorAll(".tab-button");
 const tabForms = document.querySelectorAll(".contact-form");
 
@@ -347,9 +364,22 @@ if (window.location.hash === "#academy-form") {
   setActiveForm("academy-form");
 }
 
-if (window.location.hash === "#service-form" || window.location.hash === "#services-form") {
+if (window.location.hash === "#service-form" || window.location.hash === "#services-form" || (isContactPage && !window.location.hash)) {
   setActiveForm("service-form");
 }
+
+window.addEventListener("hashchange", () => {
+  if (!isContactPage) {
+    return;
+  }
+
+  if (window.location.hash === "#academy-form") {
+    setActiveForm("academy-form");
+    return;
+  }
+
+  setActiveForm("service-form");
+});
 
 document.querySelectorAll(".segment-option input, .radio-line input").forEach((input) => {
   input.addEventListener("change", syncChoiceStates);
@@ -417,24 +447,29 @@ document.querySelectorAll("[data-edit-summary]").forEach((button) => {
   });
 });
 
-document.querySelectorAll("[data-stepper-action]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const input = button.parentElement?.querySelector('input[type="number"]');
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-stepper-action]");
 
-    if (!input) {
-      return;
-    }
+  if (!button) {
+    return;
+  }
 
-    const currentValue = Number(input.value || 0);
-    const min = Number(input.min || 0);
-    const max = Number(input.max || 10);
-    const nextValue =
-      button.dataset.stepperAction === "increment"
-        ? Math.min(max, currentValue + 1)
-        : Math.max(min, currentValue - 1);
+  const stepper = button.closest(".contact-stepper");
+  const input = stepper?.querySelector('input[type="number"]');
 
-    input.value = String(nextValue);
-  });
+  if (!input) {
+    return;
+  }
+
+  const currentValue = Number(input.value || 0);
+  const min = Number(input.min || 0);
+  const max = Number(input.max || 10);
+  const nextValue =
+    button.dataset.stepperAction === "increment"
+      ? Math.min(max, currentValue + 1)
+      : Math.max(min, currentValue - 1);
+
+  input.value = String(nextValue);
 });
 
 document.querySelectorAll("[data-share-summary]").forEach((button) => {
@@ -469,6 +504,11 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
 
     if (form.id === "home-service-form") {
       window.location.href = "./contact.html#service-form";
+      return;
+    }
+
+    if (form.id === "home-academy-form") {
+      window.location.href = "./contact.html#academy-form";
       return;
     }
 
